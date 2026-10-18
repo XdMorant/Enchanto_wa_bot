@@ -1,0 +1,43 @@
+[2026-10-18T01:56:42.042Z] [INFO] Starting bot... using WA v2.3000.1043857760, isLatest: true
+[2026-10-18T02:06:59.074Z] [INFO] Starting bot... using WA v2.3000.1043857760, isLatest: true
+[2026-10-18T02:09:01.810Z] [INFO] Starting bot... using WA v2.3000.1043857760, isLatest: true
+[2026-10-18T02:10:15.112Z] [INFO] Starting bot... using WA v2.3000.1043857760, isLatest: true
+[2026-10-18T02:11:47.878Z] [WARN] Connection closed. Status: 515. Reconnecting: true
+[2026-10-18T02:11:52.909Z] [INFO] Reconnecting...
+[2026-10-18T02:11:53.608Z] [INFO] Starting bot... using WA v2.3000.1043857760, isLatest: true
+[2026-10-18T02:12:04.027Z] [INFO] ✅ Bot successfully connected to WhatsApp!
+[2026-10-18T02:15:34.945Z] [WARN] Connection closed. Status: 408. Reconnecting: true
+[2026-10-18T02:15:40.020Z] [INFO] Reconnecting...
+[2026-10-18T02:15:41.026Z] [INFO] Starting bot... using WA v2.3000.1043857760, isLatest: true
+[2026-10-18T02:15:43.628Z] [INFO] ✅ Bot successfully connected to WhatsApp!
+[2026-10-18T02:18:55.638Z] [INFO] Starting bot... using WA v2.3000.1043857760, isLatest: true
+[2026-10-18T02:19:16.726Z] [WARN] Connection closed. Status: 515. Reconnecting: true
+[2026-10-18T02:19:21.728Z] [INFO] Reconnecting...
+[2026-10-18T02:19:22.246Z] [INFO] Starting bot... using WA v2.3000.1043857760, isLatest: true
+[2026-10-18T02:19:26.976Z] [INFO] ✅ Bot successfully connected to WhatsApp!
+[2026-10-18T02:31:02.639Z] [INFO] Starting bot... using WA v2.3000.1043857760, isLatest: true
+[2026-10-18T02:31:05.069Z] [INFO] ✅ Bot successfully connected to WhatsApp!
+[2026-10-18T02:31:19.567Z] [WARN] Connection closed. Status: 401. Reconnecting: false
+[2026-10-18T02:31:19.570Z] [ERROR] Logged out from WhatsApp. Delete the auth_info folder to scan a new QR code.
+[2026-10-18T02:32:31.370Z] [INFO] Starting bot... using WA v2.3000.1043857760, isLatest: true
+[2026-10-18T02:34:31.983Z] [INFO] Starting bot... using WA v2.3000.1043857760, isLatest: true
+[2026-10-18T02:34:49.569Z] [WARN] Connection closed. Status: 515. Reconnecting: true
+[2026-10-18T02:34:49.572Z] [INFO] WhatsApp restart requested. Reconnecting immediately...
+[2026-10-18T02:34:50.066Z] [INFO] Starting bot... using WA v2.3000.1043857760, isLatest: true
+[2026-10-18T02:34:55.111Z] [INFO] ✅ Bot successfully connected to WhatsApp!
+[2026-10-18T02:39:05.435Z] [INFO] Starting bot... using WA v2.3000.1043857760, isLatest: true
+[2026-10-18T02:39:08.679Z] [INFO] ✅ Bot successfully connected to WhatsApp!
+[2026-10-18T02:43:25.930Z] [INFO] Starting bot... using WA v2.3000.1043857760, isLatest: true
+[2026-10-18T02:43:28.360Z] [INFO] ✅ Bot successfully connected to WhatsApp!
+[2026-10-18T02:48:09.903Z] [INFO] ✅ Bot successfully connected to WhatsApp!
+[2026-10-18T02:57:35.099Z] [ERROR] chatbot .ai error: AI request failed: The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.
+[2026-10-18T02:58:08.172Z] [ERROR] chatbot .ai error: AI request failed: The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.
+[2026-10-18T02:58:19.466Z] [INFO] Owner toggled aichat off
+[2026-10-18T02:58:46.222Z] [INFO] Owner toggled aichat on
+[2026-10-18T02:59:11.333Z] [INFO] Owner added protected group 120363429194641358@g.us
+[2026-10-18T03:01:17.342Z] [DEBUG] urlGuard: bot not admin in 120363429194641358@g.us, skipping silently
+[2026-10-18T03:14:35.723Z] [INFO] Owner toggled chatbot on
+[2026-10-18T03:16:18.813Z] [INFO] Owner added protected group 120363429194641358@g.us
+[2026-10-18T03:21:31.808Z] [INFO] Owner kicked 92943629209693@lid from 120363429194641358@g.us
+[2026-10-18T03:51:55.595Z] [ERROR] chatbot DM error: AI auth failed (401). Check API key.
+[2026-10-18T03:56:21.497Z] [ERROR] chatbot .ai error: AI auth failed (401). Check API key.
