@@ -2,5 +2,8 @@ version = 1
 
 [build]
 language = "javascript"
-startCommand = "node index.js"
+framework = "express"
+port = 3000
 installCommand = "npm install"
+buildCommand = ""
+startCommand = "node index.js"
