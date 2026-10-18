@@ -1,15 +1,30 @@
 const { default: makeWASocket, useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion } = require('@whiskeysockets/baileys');
 const qrcode = require('qrcode-terminal');
 const pino = require('pino');
+const http = require('http'); // 👈 Built-in web server
 
 const logger = require('./utils/logger');
 const { loadConfig } = require('./utils/helpers');
 const { handleUrlGuard } = require('./handlers/urlGuard');
-const { handleDmAutoReply, pauseChat } = require('./handlers/chatbot'); // Added pauseChat
+const { handleDmAutoReply } = require('./handlers/chatbot');
 const { handleCommand } = require('./handlers/commands');
 
 const state = { startTime: Date.now() };
 
+// ==========================================
+// 🌐 DUMMY WEB SERVER FOR PXXL / HOSTING
+// ==========================================
+const PORT = process.env.PORT || 3000;
+http.createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('🤖 Enchanto WhatsApp Bot is Online and Running!\n');
+}).listen(PORT, () => {
+    console.log(`🌐 Web server listening on port ${PORT}`);
+});
+
+// ==========================================
+// 🤖 WHATSAPP BOT LOGIC
+// ==========================================
 async function startBot() {
     let config = loadConfig();
     const { state: authState, saveCreds } = await useMultiFileAuthState('auth_info');
@@ -28,7 +43,9 @@ async function startBot() {
         if (qr && !sock.authState.creds.registered) {
             try {
                 const code = await sock.requestPairingCode(config.ownerNumber);
-                console.log(`\nYOUR PAIRING CODE: ${code}\n`);
+                console.log(`\n=============================================`);
+                console.log(`YOUR PAIRING CODE: ${code}`);
+                console.log(`=============================================\n`);
             } catch (err) { qrcode.generate(qr, { small: true }); }
         }
 
@@ -51,18 +68,16 @@ async function startBot() {
         const text = msg.message.conversation || msg.message.extendedTextMessage?.text || '';
         const chatId = msg.key.remoteJid;
 
-        // === AUTOMATED PAUSE SWITCH ===
-        // If the message is from YOU (the owner) and it's a DM (not a group, not a command)
+        // Auto-pause: If owner replies manually in a DM
         if (msg.key.fromMe && !chatId.endsWith('@g.us') && !text.startsWith('.')) {
             console.log(`🛑 [AUTO-PAUSE] You replied to ${chatId}. Bot will sleep here for 2 hours.`);
-            pauseChat(chatId); // Tell the chatbot to sleep in this chat
-            return; // Stop processing, let your manual message go through
-        }
-
-        // Block bot's own replies to prevent infinite loops
-        if (msg.key.fromMe && !text.startsWith('.')) {
+            const { pauseChat } = require('./handlers/chatbot');
+            pauseChat(chatId); 
             return; 
         }
+
+        // Block bot's own replies
+        if (msg.key.fromMe && !text.startsWith('.')) return; 
 
         try {
             const currentConfig = loadConfig();
