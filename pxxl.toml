@@ -1,0 +1,6 @@
+version = 1
+
+[build]
+language = "javascript"
+startCommand = "node index.js"
+installCommand = "npm install"
