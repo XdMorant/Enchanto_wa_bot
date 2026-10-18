@@ -14,7 +14,7 @@
     "enabled": true,
     "commandEnabled": true,
     "provider": "groq",
-    "apiKey": "YOUR_GROQ_API_KEY_HERE",
+    "apiKey": "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",
     "model": "openai/gpt-oss-120b",
     "baseUrl": "https://api.groq.com/openai/v1",
     "systemPrompt": "You are a helpful assistant replying on behalf of the owner. Keep replies short and natural.",
